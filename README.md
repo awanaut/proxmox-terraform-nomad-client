@@ -46,4 +46,7 @@ I am using the [bgp provider](https://registry.terraform.io/providers/bpg/proxmo
 | `vm_id` | Identifier of the source VM template. Set to same ID you used when building the template with my [Packer template](https://github.com/awanaut/proxmox-nomad-packer-template). Unfortunately, having an ID is required and I couldn't find an easy way to dynamically retrieve this. Maybe i'll Look into it later. | 9999 |
 | `vm_name` | Name of the VM to create. Will append a number to the end of the name for each VM created | prod-nomad-client |
 
-
+## TO DO
+- Convert to a module and publish to registry
+- Perform Nomad allocation and/or OS level health checking before moving on to creating the next VM
+- Dynamically retrieve the ID based on name. Probably will just put in an feature request for the provider.
