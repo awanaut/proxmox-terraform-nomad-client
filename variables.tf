@@ -4,6 +4,12 @@ variable "endpoint" {
   description = "Proxmox API endpoint for the provider. Ex. https://192.168.1.200:8006"
 }
 
+variable "insecure" {
+  type        = bool
+  default     = true
+  description = "Whether to skip SSL verification"
+}
+
 variable "proxmox_api_user" {
   type        = string
   default     = "root@pam"
@@ -16,11 +22,11 @@ variable "proxmox_api_password" {
   description = "Password for API auth"
 }
 
-variable "ssh_password" {
-  type        = string
-  default     = "somepassword"
-  description = "Password for API auth"
-}
+# variable "ssh_password" {
+#   type        = string
+#   default     = "somepassword"
+#   description = "Password for API auth"
+# }
 
 variable "instance_count" {
   type        = number
@@ -31,7 +37,7 @@ variable "instance_count" {
 variable "cores" {
   type        = number
   default     = 1
-  description = "Number of cores of the LXC containers"
+  description = "Number of cores of the vm"
 }
 
 variable "sockets" {
@@ -69,6 +75,16 @@ variable "vm_id" {
   default     = 9999
   description = "VM id of the template"
 }
-variable "nomad_url" {
-  type = string
+# variable "nomad_url" {
+#   type = string
+# }
+
+# variable "template_name" {
+#   type = string
+# }
+
+variable "vm_name" {
+  type        = string
+  default     = "prod-nomad-client"
+  description = "Name of the VM to create. Will append a number to the end of the name for each VM created"
 }
