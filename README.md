@@ -8,9 +8,6 @@ Terraform module to perform a rolling deployment of Nomad Clients on Proxmox fro
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
   * [Usage](#usage)
-    * [Secrets Prequisites](#secrets-prereqs)
-    * [Vaultwarden](#vaultwarden)
-    * [Nomad](#nomad)
   * [Variables](#variables)
 <!-- TOC -->
 
