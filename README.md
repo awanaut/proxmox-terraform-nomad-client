@@ -2,6 +2,8 @@
 
 Terraform module to perform a rolling deployment of Nomad Clients on Proxmox from a template. This works in conjuction with my [Packer template](https://github.com/awanaut/proxmox-nomad-packer-template).
 
+I am using the [bgp provider](https://registry.terraform.io/providers/bpg/proxmox/latest/docs) from the official registry. There are many more options you can add in to fit your needs, but this should get you started.
+
 ## Table of Contents
 
 <!-- TOC -->
@@ -19,7 +21,6 @@ Terraform module to perform a rolling deployment of Nomad Clients on Proxmox fro
 
 ## Usage
 1. ```git clone https://github.com/awanaut/proxmox-terraform-nomad-client && cd proxmox-terraform-nomad-client```
-
 2. Create `terraform.tfvars` and fill out [variables](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files)
 3. `terraform plan` to ensure everything will work
 4. `terraform apply -parallelism=1`
