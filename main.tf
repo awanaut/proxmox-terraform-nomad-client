@@ -20,6 +20,7 @@ resource "proxmox_virtual_environment_vm" "nomadclient" {
   cpu {
     cores   = var.cores
     sockets = var.sockets
+    type    = "host"
   }
 
   disk {
@@ -34,4 +35,9 @@ resource "proxmox_virtual_environment_vm" "nomadclient" {
   lifecycle {
     create_before_destroy = true
   }
+  network_device {
+    enabled = true
+
+  }
 }
+
